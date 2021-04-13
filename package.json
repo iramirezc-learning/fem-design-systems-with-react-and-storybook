@@ -1,0 +1,24 @@
+{
+  "name": "fem-design-systems-with-react-and-storybook",
+  "version": "1.0.0",
+  "description": "This is my personal repository for the course [Design Systems with React & Storybook](https://frontendmasters.com/courses/design-systems/) hosted by [FrontEnd Masters](https://frontendmasters.com/).",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"packages/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iramirezc-learning/fem-design-systems-with-react-and-storybook.git"
+  },
+  "keywords": [],
+  "author": "Isaac Ramirez <iramirezc@live.com.mx>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iramirezc-learning/fem-design-systems-with-react-and-storybook/issues"
+  },
+  "homepage": "https://github.com/iramirezc-learning/fem-design-systems-with-react-and-storybook#readme",
+  "dependencies": {
+    "prettier": "^2.2.1"
+  }
+}
