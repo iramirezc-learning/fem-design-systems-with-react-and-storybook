@@ -11,7 +11,72 @@ const BUTTON_MODIFIERS = {
     font-size: ${theme.typeScale.H5};
     padding: 16px 24px;
   `,
-  warning: () => {},
+  success: () => `
+    background-color: ${theme.success.color};
+    color: ${theme.success.textColor};
+
+    &:hover {
+      background-color: ${theme.success.onHover};
+    }
+
+    &:focus {
+      background-color: ${theme.success.onFocus};
+      outline: 3px solid ${theme.success.onFocus};
+    }
+
+    &:active {
+      background-color: ${theme.success.onActive};
+    }
+
+    &:disabled {
+      background-color: ${theme.disabled.color};
+      color: ${theme.disabled.textColor};
+    }
+  `,
+  warning: () => `
+    background-color: ${theme.warning.color};
+    color: ${theme.warning.textColor};
+
+    &:hover {
+      background-color: ${theme.warning.onHover};
+    }
+
+    &:focus {
+      background-color: ${theme.warning.onFocus};
+      outline: 3px solid ${theme.warning.onFocus};
+    }
+
+    &:active {
+      background-color: ${theme.warning.onActive};
+    }
+
+    &:disabled {
+      background-color: ${theme.disabled.color};
+      color: ${theme.disabled.textColor};
+    }
+  `,
+  error: () => `
+    background-color: ${theme.error.color};
+    color: ${theme.error.textColor};
+
+    &:hover {
+      background-color: ${theme.error.onHover};
+    }
+
+    &:focus {
+      background-color: ${theme.error.onFocus};
+      outline: 3px solid ${theme.error.onFocus};
+    }
+
+    &:active {
+      background-color: ${theme.error.onActive};
+    }
+
+    &:disabled {
+      background-color: ${theme.disabled.color};
+      color: ${theme.disabled.textColor};
+    }
+  `,
 }
 
 const Button = styled.button`
@@ -45,7 +110,6 @@ const Button = styled.button`
 
   &:disabled {
     background: none;
-    color: ${theme.disabled.textColor};
     cursor: not-allowed;
   }
 `
@@ -62,6 +126,7 @@ export const PrimaryButton = styled(Button)`
 
   &:disabled {
     background-color: ${theme.disabled.color};
+    color: ${theme.disabled.textColor};
   }
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)}
@@ -74,6 +139,7 @@ export const SecondaryButton = styled(Button)`
 
   &:disabled {
     border-color: ${theme.disabled.color};
+    color: ${theme.disabled.textColor};
   }
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)}
@@ -81,6 +147,10 @@ export const SecondaryButton = styled(Button)`
 
 export const TertiaryButton = styled(Button)`
   box-shadow: ${theme.shadow};
+
+  &:disabled {
+    color: ${theme.disabled.textColor};
+  }
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `
