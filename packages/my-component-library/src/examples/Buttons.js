@@ -14,7 +14,7 @@ const styles = {
 
 const Buttons = () => {
   return (
-    <React.Fragment>
+    <main>
       <h1>My Buttons</h1>
       <div style={styles}>
         <h4>&nbsp;</h4>
@@ -71,7 +71,7 @@ const Buttons = () => {
           Submit
         </TertiaryButton>
       </div>
-    </React.Fragment>
+    </main>
   )
 }
 

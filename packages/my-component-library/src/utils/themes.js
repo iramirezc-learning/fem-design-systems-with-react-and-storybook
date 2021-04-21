@@ -47,3 +47,47 @@ export const defaultTheme = {
   },
   typeScale,
 }
+
+export const darkTheme = Object.assign({}, defaultTheme, {
+  textColor: neutral[600],
+  textColorInverted: neutral[100],
+  primary: {
+    color: neutral[400],
+    onHover: neutral[200],
+    onFocus: neutral[200],
+    onActive: neutral[100],
+    textColor: green[400],
+    textColorInverted: green[300],
+  },
+  secondary: {
+    color: neutral[600],
+  },
+  disabled: {
+    color: neutral[300],
+    textColor: neutral[400],
+  },
+  success: {
+    color: success[100],
+    onHover: success[200],
+    onFocus: success[200],
+    onActive: success[300],
+    textColor: neutral[600],
+    textColorInverted: neutral[100],
+  },
+  warning: {
+    color: warning[100],
+    onHover: warning[200],
+    onFocus: warning[200],
+    onActive: warning[300],
+    textColor: neutral[600],
+    textColorInverted: neutral[100],
+  },
+  error: {
+    color: error[100],
+    onHover: error[200],
+    onFocus: error[200],
+    onActive: error[300],
+    textColor: neutral[600],
+    textColorInverted: neutral[100],
+  },
+})

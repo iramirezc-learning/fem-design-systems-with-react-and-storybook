@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 import { applyStyleModifiers } from 'styled-components-modifiers'
-import { defaultTheme as theme } from '../utils'
 
 const BUTTON_MODIFIERS = {
-  small: () => `
+  small: ({ theme }) => `
     font-size: ${theme.typeScale.helperText};
     padding: 8px;
   `,
-  large: () => `
+  large: ({ theme }) => `
     font-size: ${theme.typeScale.H5};
     padding: 16px 24px;
   `,
-  success: () => `
+  success: ({ theme }) => `
     background-color: ${theme.success.color};
     color: ${theme.success.textColor};
 
@@ -33,7 +32,7 @@ const BUTTON_MODIFIERS = {
       color: ${theme.disabled.textColor};
     }
   `,
-  warning: () => `
+  warning: ({ theme }) => `
     background-color: ${theme.warning.color};
     color: ${theme.warning.textColor};
 
@@ -55,7 +54,7 @@ const BUTTON_MODIFIERS = {
       color: ${theme.disabled.textColor};
     }
   `,
-  error: () => `
+  error: ({ theme }) => `
     background-color: ${theme.error.color};
     color: ${theme.error.textColor};
 
@@ -85,27 +84,27 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   background: none;
-  font-size: ${theme.typeScale.paragraph};
-  font-family: ${theme.primaryFont};
-  color: ${theme.textColor};
+  font-size: ${({ theme }) => theme.typeScale.paragraph};
+  font-family: ${({ theme }) => theme.primaryFont};
+  color: ${({ theme }) => theme.textColor};
   cursor: pointer;
   transition: background-color 0.2s linear, color 0.2s linear;
 
   &:hover {
-    background-color: ${theme.primary.onHover};
-    color: ${theme.textColorInverted};
+    background-color: ${({ theme }) => theme.primary.onHover};
+    color: ${({ theme }) => theme.textColorInverted};
   }
 
   &:focus {
-    background-color: ${theme.primary.onFocus};
-    color: ${theme.textColorInverted};
-    outline: 3px solid ${theme.primary.onFocus};
+    background-color: ${({ theme }) => theme.primary.onFocus};
+    color: ${({ theme }) => theme.textColorInverted};
+    outline: 3px solid ${({ theme }) => theme.primary.onFocus};
     outline-offset: 2px;
   }
 
   &:active {
-    background-color: ${theme.primary.onActive};
-    color: ${theme.textColorInverted};
+    background-color: ${({ theme }) => theme.primary.onActive};
+    color: ${({ theme }) => theme.textColorInverted};
   }
 
   &:disabled {
@@ -115,18 +114,18 @@ const Button = styled.button`
 `
 
 export const PrimaryButton = styled(Button)`
-  background-color: ${theme.primary.color};
-  color: ${theme.primary.textColor};
+  background-color: ${({ theme }) => theme.primary.color};
+  color: ${({ theme }) => theme.primary.textColor};
 
   &:hover,
   &:focus,
   &:active {
-    color: ${theme.primary.textColorInverted};
+    color: ${({ theme }) => theme.primary.textColorInverted};
   }
 
   &:disabled {
-    background-color: ${theme.disabled.color};
-    color: ${theme.disabled.textColor};
+    background-color: ${({ theme }) => theme.disabled.color};
+    color: ${({ theme }) => theme.disabled.textColor};
   }
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)}
@@ -134,22 +133,22 @@ export const PrimaryButton = styled(Button)`
 
 export const SecondaryButton = styled(Button)`
   border-width: 3px;
-  border-color: ${theme.secondary.color};
+  border-color: ${({ theme }) => theme.secondary.color};
   border-style: solid;
 
   &:disabled {
-    border-color: ${theme.disabled.color};
-    color: ${theme.disabled.textColor};
+    border-color: ${({ theme }) => theme.disabled.color};
+    color: ${({ theme }) => theme.disabled.textColor};
   }
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `
 
 export const TertiaryButton = styled(Button)`
-  box-shadow: ${theme.shadow};
+  box-shadow: ${({ theme }) => theme.shadow};
 
   &:disabled {
-    color: ${theme.disabled.textColor};
+    color: ${({ theme }) => theme.disabled.textColor};
   }
 
   ${applyStyleModifiers(BUTTON_MODIFIERS)}
