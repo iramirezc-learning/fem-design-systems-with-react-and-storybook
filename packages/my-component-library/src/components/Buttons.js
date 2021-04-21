@@ -11,21 +11,63 @@ const Button = styled.button`
   font-family: ${defaultTheme.primaryFont};
   color: ${defaultTheme.textColor};
   cursor: pointer;
+  transition: background-color 0.2s linear, color 0.2s linear;
+
+  &:hover {
+    background-color: ${defaultTheme.primaryColorOnFocus};
+    color: ${defaultTheme.textColorInverted};
+  }
+
+  &:focus {
+    background-color: ${defaultTheme.primaryColorOnHover};
+    color: ${defaultTheme.textColorInverted};
+  }
+
+  &:active {
+    background-color: ${defaultTheme.primaryColorOnActive};
+    color: ${defaultTheme.textColorInverted};
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `
 
 export const PrimaryButton = styled(Button)`
   background-color: ${defaultTheme.primaryColor};
-  color: ${defaultTheme.textColorInverted};
+  color: ${defaultTheme.textColorOnPrimary};
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: ${defaultTheme.textColor};
+  }
+
+  &:disabled {
+    background-color: ${defaultTheme.primaryColorOnDisable};
+    color: ${defaultTheme.textColorOnDisabled};
+  }
 `
 
 export const SecondaryButton = styled(Button)`
   border-width: 3px;
-  border-color: ${defaultTheme.primaryColor};
+  border-color: ${defaultTheme.secondaryColor};
   border-style: solid;
+
+  &:disabled {
+    background: none;
+    border-color: ${defaultTheme.primaryColorOnDisable};
+    color: ${defaultTheme.textColorOnDisabled};
+  }
 `
 
 export const TertiaryButton = styled(Button)`
   box-shadow: ${defaultTheme.shadow};
+
+  &:disabled {
+    background: none;
+    color: ${defaultTheme.textColorOnDisabled};
+  }
 `
 
 export default PrimaryButton
