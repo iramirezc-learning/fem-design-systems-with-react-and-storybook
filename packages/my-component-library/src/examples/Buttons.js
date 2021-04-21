@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  PrimaryButton,
-  SecondaryButton,
-  TertiaryButton,
-} from '../components/Buttons'
+import { PrimaryButton, SecondaryButton, TertiaryButton } from '../components'
 
 const styles = {
   display: 'flex',

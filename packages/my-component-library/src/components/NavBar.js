@@ -9,10 +9,13 @@ const style = {
   padding: '12px 32px',
 }
 
-const NavBar = ({ onToggle }) => (
+export const NavBar = ({ onToggle, onClick }) => (
   <nav style={style}>
     <input type="checkbox" onChange={onToggle} />
     &nbsp;Dark Theme
+    <button style={{ marginLeft: '20px' }} onClick={onClick}>
+      Sign Up
+    </button>
   </nav>
 )
 

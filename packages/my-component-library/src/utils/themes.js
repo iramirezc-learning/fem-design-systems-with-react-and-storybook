@@ -6,6 +6,10 @@ export const defaultTheme = {
   textColor: neutral[600],
   textColorInverted: neutral[100],
   shadow: '1px 2px 5px -2px rgba(0, 0, 0, 0.5)',
+  modal: {
+    color: neutral[100],
+    textColor: neutral[600],
+  },
   primary: {
     color: green[400],
     onHover: green[200],

@@ -3,21 +3,27 @@ import ReactDOM from 'react-dom'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './common'
 import { defaultTheme, darkTheme } from './utils/themes'
-import NavBar from './components/NavBar'
+import { NavBar, SignUpModal } from './components'
 import ButtonsExamples from './examples/Buttons'
 
 const App = () => {
   const [theme, setTheme] = useState(defaultTheme)
+  const [showSignUpModal, setShowSignUpModal] = useState(false)
 
   const handleToggle = () => {
     setTheme(theme === defaultTheme ? darkTheme : defaultTheme)
   }
 
+  const handleClick = () => {
+    setShowSignUpModal((currentState) => !currentState)
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <NavBar onToggle={handleToggle} />
+      <NavBar onToggle={handleToggle} onClick={handleClick} />
       <ButtonsExamples />
+      {showSignUpModal ? <SignUpModal closeModal={handleClick} /> : null}
     </ThemeProvider>
   )
 }
