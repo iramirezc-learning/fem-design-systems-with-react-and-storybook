@@ -14,13 +14,15 @@ const Button = styled.button`
   transition: background-color 0.2s linear, color 0.2s linear;
 
   &:hover {
-    background-color: ${defaultTheme.primaryColorOnFocus};
+    background-color: ${defaultTheme.primaryColorOnHover};
     color: ${defaultTheme.textColorInverted};
   }
 
   &:focus {
-    background-color: ${defaultTheme.primaryColorOnHover};
+    background-color: ${defaultTheme.primaryColorOnFocus};
     color: ${defaultTheme.textColorInverted};
+    outline: 3px solid ${defaultTheme.primaryColorOnFocus};
+    outline-offset: 2px;
   }
 
   &:active {
