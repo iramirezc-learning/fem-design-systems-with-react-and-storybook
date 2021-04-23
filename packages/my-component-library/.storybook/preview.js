@@ -13,6 +13,7 @@ addParameters({
       { name: 'black', value: '#050449' },
     ],
   },
+  // TODO: for some reason the accessibility scan is not working!
   a11y: {
     element: '#root',
     config: {},
