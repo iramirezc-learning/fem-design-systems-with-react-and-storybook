@@ -2,7 +2,7 @@
 
 This is my personal repository for the course [Design Systems with React & Storybook](https://frontendmasters.com/courses/design-systems/) hosted by [FrontEnd Masters](https://frontendmasters.com/).
 
-> 🚧 WIP Since Apr 2021
+
 ## Course Details
 
 Teacher
@@ -25,11 +25,11 @@ Started On
 
 Completed On
 
-> ???
+> Apr 23, 2021
 
 Total Pomodoro Time
 
-> ???
+> 15 hours
 
 ## Course Resources
 
