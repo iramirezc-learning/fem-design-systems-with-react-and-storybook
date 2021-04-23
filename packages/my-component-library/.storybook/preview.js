@@ -22,5 +22,6 @@ addParameters({
   },
 })
 
+addDecorator(withA11y) // Deprecated?
 addDecorator(withKnobs)
 addDecorator(withContexts(contexts))
