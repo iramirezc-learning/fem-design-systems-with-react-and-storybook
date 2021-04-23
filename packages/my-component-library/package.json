@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.2.9",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-backgrounds": "^6.2.9",
     "@storybook/addon-contexts": "^5.3.21",

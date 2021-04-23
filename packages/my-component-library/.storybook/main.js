@@ -8,5 +8,6 @@ module.exports = {
     '@storybook/addon-backgrounds/register',
     '@storybook/addon-docs',
     '@storybook/addon-knobs',
+    '@storybook/addon-a11y/register',
   ],
 }
