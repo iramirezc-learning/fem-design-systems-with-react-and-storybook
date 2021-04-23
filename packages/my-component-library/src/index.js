@@ -8,14 +8,14 @@ import { Buttons } from './examples'
 
 const App = () => {
   const [theme, setTheme] = useState(defaultTheme)
-  const [showSignUpModal, setShowSignUpModal] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   const handleToggle = () => {
     setTheme(theme === defaultTheme ? darkTheme : defaultTheme)
   }
 
   const handleClick = () => {
-    setShowSignUpModal((currentState) => !currentState)
+    setShowModal((currentState) => !currentState)
   }
 
   return (
@@ -25,7 +25,7 @@ const App = () => {
       <Buttons />
       {/* <FadeIn /> */}
       {/* <EmojiCarousel /> */}
-      {showSignUpModal ? <SignUpModal closeModal={handleClick} /> : null}
+      <SignUpModal show={showModal} closeModal={handleClick} />
     </ThemeProvider>
   )
 }
