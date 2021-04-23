@@ -8,7 +8,7 @@ const styles = {
   marginBottom: '20px',
 }
 
-const Buttons = () => {
+export const Buttons = () => {
   return (
     <main>
       <h1>My Buttons</h1>

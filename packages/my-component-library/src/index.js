@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './common'
 import { defaultTheme, darkTheme } from './utils/themes'
 import { NavBar, SignUpModal } from './components'
-import ButtonsExamples from './examples/Buttons'
+import { Buttons } from './examples'
 
 const App = () => {
   const [theme, setTheme] = useState(defaultTheme)
@@ -22,7 +22,9 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <NavBar onToggle={handleToggle} onClick={handleClick} />
-      <ButtonsExamples />
+      <Buttons />
+      {/* <FadeIn /> */}
+      {/* <EmojiCarousel /> */}
       {showSignUpModal ? <SignUpModal closeModal={handleClick} /> : null}
     </ThemeProvider>
   )
